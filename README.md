@@ -34,10 +34,10 @@ No admin rights for normal use (a couple of Troubleshooting actions prompt for U
 
 ## Known issues
 
-- **Rumble / adaptive-trigger test needs the speaker idle (firmware v0.7.1).** This is a firmware
-  bug: while Windows is using the dongle's speaker as the active playback device — or streaming
+- **Rumble / adaptive-trigger test needs the speaker active (firmware v0.7.1).** This is a firmware
+  bug: while Windows is using the dongle's speaker as the active playback device — and not streaming
   audio to it — the controller ignores the rumble and trigger tests. Workaround: switch your Windows
-  output to another device (or stop audio playback), then run the test. It will be fixed in a future
+  output to another device (or start audio playback), then run the test. It will be fixed in a future
   firmware update.
 
 ## Found a bug?
