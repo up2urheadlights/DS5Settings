@@ -18,6 +18,9 @@ single file — no installer, no Python, nothing to set up. Just run it.
   gains, mic/speaker enable, polling rate, controller mode, and more; save to the dongle's flash.
 - **Input Test** — see your controller live: buttons, sticks, d-pad, touchpad, triggers,
   gyro/accel, and factory motion-sensor calibration. Test rumble and adaptive triggers.
+- **Live status & debug** — Bluetooth signal strength (RSSI), battery, firmware version, the
+  real-time USB polling rate, and whether the mic and speaker are actually streaming — handy for
+  diagnosing connection or audio problems.
 - **Firmware** — drag a `.uf2` onto the window to flash the dongle (once it's in BOOTSEL).
 - **Troubleshooting** — clear stale Windows DualSense audio/HID entries; enable wake-on-PS.
 
@@ -31,10 +34,11 @@ No admin rights for normal use (a couple of Troubleshooting actions prompt for U
 
 ## Known issues
 
-- **Rumble / adaptive-trigger test needs the speaker idle (firmware v0.7.1).** While Windows is
-  using the dongle's speaker as the active playback device — or streaming audio to it — the
-  controller ignores the rumble and trigger tests. Switch your Windows output to another device
-  (or stop audio playback), then run the test.
+- **Rumble / adaptive-trigger test needs the speaker idle (firmware v0.7.1).** This is a firmware
+  bug: while Windows is using the dongle's speaker as the active playback device — or streaming
+  audio to it — the controller ignores the rumble and trigger tests. Workaround: switch your Windows
+  output to another device (or stop audio playback), then run the test. It will be fixed in a future
+  firmware update.
 
 ## Found a bug?
 
