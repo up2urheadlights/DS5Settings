@@ -14,8 +14,9 @@ single file — no installer, no Python, nothing to set up. Just run it.
 
 ## What it does
 
-- **Settings** — change every dongle setting over USB: speaker/headset volume (applied live),
-  gains, mic/speaker enable, polling rate, controller mode, and more; save to the dongle's flash.
+- **Settings** — change every dongle setting over USB: haptics/speaker gain, adaptive-trigger
+  reduction, mic/speaker enable, polling rate, controller mode, inactivity timeout, and wake-on-PS;
+  save to the dongle's flash. (Speaker/headset volume is set from the Windows volume panel.)
 - **Input Test** — see your controller live: buttons, sticks, d-pad, touchpad, triggers,
   gyro/accel, and factory motion-sensor calibration. Test rumble and adaptive triggers.
 - **Live status & debug** — Bluetooth signal strength (RSSI), battery, firmware version, the
@@ -27,17 +28,17 @@ single file — no installer, no Python, nothing to set up. Just run it.
 ## Requirements
 
 - Windows 10/11 (64-bit)
-- A [DS5Dongle](https://github.com/awalol/DS5Dongle) running firmware **v0.7.1** or newer,
+- A [DS5Dongle](https://github.com/awalol/DS5Dongle) running firmware **v0.7.2** or newer,
   connected over USB
 
 No admin rights for normal use (a couple of Troubleshooting actions prompt for UAC).
 
 ## Known issues
 
-- **Rumble / adaptive-trigger test needs the speaker active (firmware v0.7.1).** This is a firmware
-  bug: while Windows is using the dongle's speaker as the active playback device — and not streaming
-  audio to it — the controller ignores the rumble and trigger tests. Workaround: switch your Windows
-  output to another device (or start audio playback), then run the test. It will be fixed in a future
+- **Adaptive-trigger test needs the speaker active (firmware v0.7.2).** This is a firmware
+  bug: while Windows is using the dongle's speaker as the active playback device — and is not streaming
+  audio to it — the controller ignores the adaptive-trigger test. Workaround: switch your Windows
+  output to another device (or play audio through the speaker), then run the test. It will be fixed in a future
   firmware update.
 
 ## Found a bug?
